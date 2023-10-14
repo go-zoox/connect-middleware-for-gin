@@ -6,12 +6,12 @@ import (
 	"github.com/go-zoox/jwt"
 )
 
-// CreateOptions ...
+// CreateOptions is the options for the Create middleware.
 type CreateOptions struct {
 	RequireAuth bool
 }
 
-// Create ...
+// Create creates a connect middleware for gin.
 func Create(secretKey string, opts ...*CreateOptions) gin.HandlerFunc {
 	var signer jwt.Jwt
 	var optsX *CreateOptions

@@ -7,6 +7,7 @@ import (
 	user "github.com/go-zoox/connect/user"
 )
 
+// GetUser gets the user from the context.
 func GetUser(ctx *gin.Context) (u *user.User, err error) {
 	v, exist := ctx.Get(ContextUserKey)
 	if !exist {
