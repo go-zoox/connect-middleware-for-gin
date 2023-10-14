@@ -53,7 +53,8 @@ func main() {
 ```
 
 ## Related Projects
-* [go-zoox/connect](https://github.com/go-zoox/ratelimit) - The Auth Connect.
+* [go-zoox/connect](https://github.com/go-zoox/connect) - The Auth Connect.
+* [go-zoox/connect-middleware-for-zoox](https://github.com/go-zoox/connect-middleware-for-zoox) - The Auth Connect Middleware for Zoox.
 
 ## License
 GoZoox is released under the [MIT License](./LICENSE).
