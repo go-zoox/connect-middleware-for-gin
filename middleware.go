@@ -24,8 +24,8 @@ func Create(secretKey string, opts ...*CreateOptions) gin.HandlerFunc {
 			signer = jwt.New(secretKey)
 		}
 
-		token := ctx.GetHeader("x-connect-token")
-		if token != "" {
+		token, err := GetToken(ctx)
+		if err == nil {
 			user := &user.User{}
 			if err := user.Decode(signer, token); err != nil {
 				// if ctx.AcceptJSON() {
